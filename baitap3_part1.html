@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const dolphins = [96, 108, 89];
+        const koalas = [88, 91, 110];
+
+        const bonus1 = {
+            dol: [97, 112, 101],
+            koa: [109, 95, 123]
+        };
+
+        const bonus2 = {
+            dol: [97, 112, 101],
+            koa: [109, 96, 106]
+        };
+
+        function calculateAverage(scores) {
+            const total = scores.reduce((acc, score) => acc + score, 0);
+            return total / scores.length;
+        }
+
+        function determineWinner(avgDolphins, avgKoalas) {
+            if (avgDolphins >= 2 * avgKoalas) {
+                console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+            } else if (avgKoalas >= 2 * avgDolphins) {
+                console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+            } else {
+                console.log('No team wins');
+            }
+        }
+
+        const avgDolphins = calculateAverage(dolphins);
+        const avgKoalas = calculateAverage(koalas);
+        determineWinner(avgDolphins, avgKoalas);
+
+        const avgDolphinsBonus1 = calculateAverage(bonus1.dol);
+        const avgKoalasBonus1 = calculateAverage(bonus1.koa);
+        determineWinner(avgDolphinsBonus1, avgKoalasBonus1);
+
+        const avgDolphinsBonus2 = calculateAverage(bonus2.dol);
+        const avgKoalasBonus2 = calculateAverage(bonus2.koa);
+        determineWinner(avgDolphinsBonus2, avgKoalasBonus2);
+        
+    </script>
+</body>
+</html>
