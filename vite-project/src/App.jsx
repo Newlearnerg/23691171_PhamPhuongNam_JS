@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ProductList from "./Buoi1/Bai5/ProductList.jsx";
+import Header from "./Buoi2/Bai1/Header.jsx"
+import StudentInfo from "./Buoi2/Bai1/StudentInfo.jsx"
+//import {useState} from "react";
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  const student = {
+    hoTen : 'Pham Phuong Nam',
+    mssv : '23691171',
+    lop : 'DHKHMT19A'
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <Header />
+      <StudentInfo
+        hoTen={student.hoTen}
+        mssv={student.mssv}
+        lop={student.lop}
+      />
     </>
-  )
+  );
 }
 
 export default App

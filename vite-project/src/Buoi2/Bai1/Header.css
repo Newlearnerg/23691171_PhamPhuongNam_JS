@@ -1,0 +1,21 @@
+.profile-image {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 30px 20px;
+    background-color: hsl(204, 100%, 50%);
+    border-radius: 10px;
+}
+
+.profile-image .image  {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-image .title {
+    margin-left: 100px;
+    font-family: "Arial", sans-serif;
+    font-size: 40px;
+    color: white;
+}

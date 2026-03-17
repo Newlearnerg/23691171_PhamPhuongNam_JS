@@ -1,0 +1,87 @@
+.login-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px hsla(0, 0%, 0%, 0.2);
+    padding: 3% 5% ;
+}
+
+.login-form .form-close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+    font-size: 24px;
+    line-height: 1;
+    color: hsl(300, 2%, 30%);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-form .form-close-btn:hover {
+    background-color: hsl(0, 0%, 93%);
+    transform: scale(1.08);
+}
+
+.login-form .form-title {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: hsl(300, 2%, 10%);
+}
+
+.form-password,
+.form-username{
+    width: 80%;
+    height: 30px;
+    padding-left: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.login-form .form-password:hover,
+.login-form .form-username:hover {
+    background-color: hsl(0, 0%, 96%);
+    border-color: hsl(0, 0%, 75%);
+}
+
+.login-form .form-password:focus,
+.login-form .form-username:focus{
+    background-color: hsl(0, 0%, 91%);
+    transform: scale(1.03);
+}
+
+.login-form .password-label,
+.login-form .username-label {
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.login-form .form-button {
+    width: 100%;
+    margin-top: 5%;
+    padding: 15px 0;
+    border-radius: 10px;
+    background-color: hsl(313, 55%, 74%);
+    color: white;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.login-form .form-button:hover {
+    background-color: hsl(313, 55%, 64%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px hsla(313, 55%, 50%, 0.25);
+}
